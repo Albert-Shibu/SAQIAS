@@ -23,14 +23,13 @@ def detect():
     path = INPUT / secure_filename(image.filename)
     image.save(path)
 
-    # Replace this demo result with your friend's AI:
-    # from vision.measurements import analyze_image
-    # return jsonify(analyze_image(str(path)))
-
     return jsonify(
         absorption=68.4,
         dry=31.6,
         confidence=91.2,
+        confidence_label="High Confidence",
+        model_version="IdlySambarNet v1.0-useless",
+        analysis_time_ms=1240,
         insight="This idly has absorbed a solid amount of sambar. It's not fully soaked yet, but it's on the way to becoming a sambar legend."
     )
 
