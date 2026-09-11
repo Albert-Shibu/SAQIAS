@@ -8,6 +8,7 @@ INPUT = BASE / "input"
 INPUT.mkdir(exist_ok=True)
 ALLOWED = {"png", "jpg", "jpeg", "webp"}
 
+# hello my name is albert
 @app.route("/")
 def home():
     return render_template("index.html")
